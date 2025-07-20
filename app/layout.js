@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
+import './global.css'
 import { Inter, DM_Sans } from "next/font/google";
 
 export const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
