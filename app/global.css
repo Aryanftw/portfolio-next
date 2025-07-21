@@ -1,1 +1,24 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+
+@keyframes border-rgb {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 80% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-border {
+  position: relative;
+}
+
+.animated-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px; 
+  background: linear-gradient(90deg, red, blue, green);
+  background-size: 400% 400%;
+  animation: border-rgb 3s ease infinite;
+  border-radius: 5px;
+}
